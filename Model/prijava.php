@@ -7,7 +7,7 @@ public $sala;
 public$datum;
 
 
-public function __construct($id=null,$predmet,$katedra, $sala,$datum){
+public function __construct($id=null,$predmet= null,$katedra=null, $sala=null,$datum=null){
 
 $this->id= $id;
 $this->predmet = $predmet;
@@ -34,6 +34,20 @@ public static function dodaj (Prijava $prijava, mysqli $conn) { // create ili ad
 
 
              return $conn->query($query);}
+
+
+// brisanje
+ public function obrisi(mysqli $conn)
+ {
+                $query = " DELETE FROM prijave WHERE id= $this->id"; //id prijave iz baze, posto nije staticka metoda pozivamo objekat iz tavele
+                return $conn->query($query);
+
+ }
+
+
+
+
+
    }
 
      ?>
