@@ -30,13 +30,11 @@ public static function prikaziSve(mysqli $conn)
 public static function dodaj (Prijava $prijava, mysqli $conn) { // create ili add u crud-u
 
         $query = "INSERT INTO prijave(predmet, katedra, sala, datum) 
-        VALUES ('$prijava->predmet',' $prijava->katedra',' $prijava->sala' , '$prijava->datum' );
+        VALUES ('$prijava->predmet',' $prijava->katedra',' $prijava->sala' , '$prijava->datum' )";
 
 
              return $conn->query($query);}
-   
-
-        }
+   }
 
      ?>
      

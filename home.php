@@ -117,7 +117,7 @@ else{
             </div>
             <div class="modal-body">
                 <div class="container prijava-form">
-                    <form action="#" method="post" id="dodajForm">
+                    <form action="handler/create.php" method="post" id="dodajForm">
                         <h3 style="color: black; text-align: center" >Zakazi kolokvijum</h3>
                         <div class="row">
                             <div class="col-md-11 ">
